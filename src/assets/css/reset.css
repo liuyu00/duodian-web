@@ -50,3 +50,6 @@ table {
 a {
   font-size: 28px;
 }
+* {
+	font-size: inherit;
+}
