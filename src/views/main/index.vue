@@ -1,6 +1,8 @@
 <template>
   <div class="page">
+    <keep-alive>
     <router-view></router-view>
+    </keep-alive>
     <nav class="footer-nav">
       <router-link
         v-for="(item, index) in tabs"

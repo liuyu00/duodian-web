@@ -8,6 +8,7 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import TabBar from './components/TabBar'
 import ProductList from './components/ProductList'
 import Tags from './components/Tags'
+import Card from './components/Card'
 
 import './utils/rem'
 
@@ -21,6 +22,7 @@ Vue.use(VueAwesomeSwiper)
 Vue.component('TabBar', TabBar)
 Vue.component('ProductList', ProductList)
 Vue.component('Tags', Tags)
+Vue.component('Card', Card)
 
 new Vue({
   router,

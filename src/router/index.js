@@ -26,6 +26,10 @@ const routes = [
         component: () => import('@/views/mine')
       }
     ]
+  },
+  {
+    path: '/detail/:id',
+    component: () => import('@/views/detail')
   }
 ]
 
