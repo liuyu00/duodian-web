@@ -21,8 +21,7 @@ Vue.use(VueAwesomeSwiper)
 Vue.component('TabBar', TabBar)
 Vue.component('ProductList', ProductList)
 Vue.component('Tags', Tags)
-console.log(123)
-console.log(321)
+
 new Vue({
   router,
   store,

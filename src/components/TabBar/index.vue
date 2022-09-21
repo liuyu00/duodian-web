@@ -1,5 +1,7 @@
 <template>
-  <div class="tab-bar">
+  <div class="tab-bar" :class="{
+    [layout]: true
+  }">
     <nav>
       <a
         v-for="(item, index) in tabs"
@@ -9,7 +11,7 @@
         }"
         href="javascript:;"
         @click="change(index)"
-      >{{item.text}}</a>
+      >{{item[tabName]}}</a>
     </nav>
   </div>
 </template>
@@ -18,7 +20,20 @@
 export default {
   name: 'tab-bar',
   props: {
-    tabs: Array
+    tabs: Array,
+    tabName: {
+      type: String,
+      default: 'text'
+    },
+    layout: {
+      type: String,
+      default: 'row'
+    }
+  },
+  watch: {
+    tabs () {
+      this.activeIndex = 0
+    }
   },
   data () {
     return {
@@ -56,6 +71,13 @@ export default {
         font-size: 32px;
         font-weight: bold;
       }
+    }
+  }
+  &.column {
+    @include wh(172px, 100%);
+    nav {
+      @include wh(100%, auto);
+      @include flex(column);
     }
   }
 }
